@@ -16,34 +16,34 @@ function search() {
                 country.name.toLowerCase() === keyword
             );
 
-            function createCard(name, imageUrl, description) {
-                const card = document.createElement("div");
-                card.className = "recommendation-card";
-                card.style.border = "1px solid #ccc";
-                card.style.borderRadius = "10px";
-                card.style.margin = "15px";
-                card.style.padding = "10px";
-                card.style.backgroundColor = "#fff";
-                card.style.width = "300px";
-                card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+         function createCard(name, imageUrl, description) {
+    const card = document.createElement("div");
+    card.className = "recommendation-card";
+    card.style.border = "1px solid #ccc";
+    card.style.borderRadius = "10px";
+    card.style.margin = "15px";
+    card.style.padding = "10px";
+    card.style.backgroundColor = "#fff";
+    card.style.width = "300px";
+    card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
 
-                const title = document.createElement("h3");
-                title.textContent = name;
+    const title = document.createElement("h3");
+    title.textContent = name;
 
-                const img = document.createElement("img");
-                img.src = imageUrl;
-                img.alt = name;
-                img.style.width = "100%";
-                img.style.borderRadius = "8px";
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = name;
+    img.style.width = "100%";
+    img.style.borderRadius = "8px";
 
-                const desc = document.createElement("p");
-                desc.textContent = description;
+    const desc = document.createElement("p");
+    desc.textContent = description;
 
-                card.appendChild(title);
-                card.appendChild(img);
-                card.appendChild(desc);
-                resultsContainer.appendChild(card);
-            }
+    card.appendChild(title);
+    card.appendChild(img);
+    card.appendChild(desc);
+    resultsContainer.appendChild(card);
+}
 
             let matched = false;
 
