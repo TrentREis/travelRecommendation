@@ -16,9 +16,11 @@ function search() {
                 country.name.toLowerCase() === keyword
             );
 
-     function createCard(name, imageUrl, description) {
+  function createCard(name, imageUrl, description) {
     const card = document.createElement("div");
     card.className = "recommendation-card";
+
+    // Add basic styling (could also be moved to CSS)
     card.style.border = "1px solid #ccc";
     card.style.borderRadius = "10px";
     card.style.margin = "15px";
@@ -26,24 +28,37 @@ function search() {
     card.style.backgroundColor = "#fff";
     card.style.width = "300px";
     card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+    card.style.color = "#333";  // Make sure text isn't invisible
+    card.style.fontFamily = "Arial, sans-serif";
 
     const title = document.createElement("h3");
     title.textContent = name;
+    title.style.marginBottom = "10px";
+    title.style.fontSize = "20px";
 
     const img = document.createElement("img");
     img.src = imageUrl;
     img.alt = name;
     img.style.width = "100%";
     img.style.borderRadius = "8px";
+    img.style.marginBottom = "10px";
 
     const desc = document.createElement("p");
     desc.textContent = description;
+    desc.style.fontSize = "14px";
+    desc.style.lineHeight = "1.5";
+    desc.style.margin = "0";
 
+    // Add all children to the card
     card.appendChild(title);
     card.appendChild(img);
     card.appendChild(desc);
+
+    // Add the card to the results container
+    const resultsContainer = document.getElementById("results");
     resultsContainer.appendChild(card);
 }
+
 
 
             let matched = false;
