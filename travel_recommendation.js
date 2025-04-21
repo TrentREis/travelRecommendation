@@ -16,7 +16,7 @@ function search() {
                 country.name.toLowerCase() === keyword
             );
 
-         function createCard(name, imageUrl, description) {
+     function createCard(name, imageUrl, description) {
     const card = document.createElement("div");
     card.className = "recommendation-card";
     card.style.border = "1px solid #ccc";
@@ -44,6 +44,7 @@ function search() {
     card.appendChild(desc);
     resultsContainer.appendChild(card);
 }
+
 
             let matched = false;
 
